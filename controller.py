@@ -197,16 +197,16 @@ def main_loop() -> None:
     view.print_commands()
 
     # DEBUG: configure a tournament for the tests
-    players.load_list(insertion_sort=True)
-    tournament.set_name("my_first_tournament")
-    tournament.set_location("Paris")
-    tournament.set_dates(10, 10, 2022, 11, 10, 2022)
-    tournament.set_description("tournament created for debug purposes")
-    tournament.set_time_control(2)
+    # players.load_list(insertion_sort=True)
+    # tournament.set_name("my_first_tournament")
+    # tournament.set_location("Paris")
+    # tournament.set_dates(10, 10, 2022, 11, 10, 2022)
+    # tournament.set_description("tournament created for debug purposes")
+    # tournament.set_time_control(2)
 
-    for i in range(8):
-        new_player = players.get_player(i)
-        tournament.add_player(new_player)
+    # for i in range(8):
+    #     new_player = players.get_player(i)
+    #     tournament.add_player(new_player)
 
     while True:
         command = prompt_for_str("")
