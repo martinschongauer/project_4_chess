@@ -29,17 +29,17 @@ def print_commands() -> None:
     print("List of commands:")
     print("help: print this list of commands")
     print("quit: leave Python Chess Tournament Manager")
-    print("print_players: prints the whole list of players and their infos")
-    print("add_player: create a new player to add to the list")
-    print("del_player: remove player from the list")
-    print("clear_players: delete the whole list of players")
+    print("players_print: prints the whole list of players and their infos")
+    print("player_add: create a new player to add to the list")
+    print("player_del: remove player from the list")
+    print("players_clear: delete the whole list of players")
+    print("players_save: saves the whole list of players with TinyDB")
+    print("players_load: loads the whole list of players with TinyDB")
     print("edit_first_name: change first name for a player")
     print("edit_last_name: change last name for a player")
     print("edit_sex: change sex for a player")
     print("edit_birthday: change birth date for a player")
     print("edit_rating: change rank for a player")
-    print("save_list: saves the whole list of players with TinyDB")
-    print("load_list: loads the whole list of players with TinyDB")
     print("db_tournament_print: find and print a tournament in the database")
     print("db_tournament_print_all: list an print tournaments in the database")
     print("db_tournament_del: delete tournament in database")
@@ -57,7 +57,7 @@ def print_commands() -> None:
     print("tournament_save: save tournament data in database")
     print("tournament_load: load tournament data from database")
     print("round_print: prints infos about current round (the four matches)")
-    print("match_result: declares/overwrites results for an ongoing match")
+    print("round_match_result: declares/overwrites results for an ongoing match")
     print("round_next: launch next round if all matches are finished for this one")
 
     return
@@ -100,7 +100,7 @@ def print_prompt_for_int_in_range(prompt: str, min_val: int, max_val: int) -> No
 
 def print_prompt_for_match_result() -> None:
     """Asks user to enter a result code for a match (0-3)
-    
+
     return: None
     """
 
@@ -207,9 +207,9 @@ def print_tournament_infos(tournament: dict) -> None:
     print(f"Tournament end date: {tournament['end_date']}")
 
     if tournament['tournament_finished']:
-        print(f"Tournament status: Finished\n")
+        print("Tournament status: Finished\n")
     else:
-        print(f"Tournament status: Not finished\n")
+        print("Tournament status: Not finished\n")
 
     return
 

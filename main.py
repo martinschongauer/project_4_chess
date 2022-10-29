@@ -1,11 +1,11 @@
 """
 Chess Tournament Manager
 OpenClassroom Project 4
-Main fileload
+Main file
 """
 
 import controller
-import DB_init
+# import DB_init
 
 
 # Entry point of our program

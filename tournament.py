@@ -54,8 +54,8 @@ class Tournament:
             return False
 
         # Convert dates in readable format to store them
-        self.start_date = start_datetime.strftime(f"%A, %B the %dth, %Y")
-        self.end_date = end_datetime.strftime(f"%A, %B the %dth, %Y")
+        self.start_date = start_datetime.strftime("%A, %B the %dth, %Y")
+        self.end_date = end_datetime.strftime("%A, %B the %dth, %Y")
 
         return True
 
@@ -152,6 +152,7 @@ class Tournament:
         self.players.clean_list()
         self.round_number = 0
         self.tournament_finished = False
+        self.tournament_started = False
         self.clear_rounds()
 
         return True
@@ -399,7 +400,7 @@ class Tournament:
                         self.current_round.add_match(first_name_1, first_name_2, last_name_1, last_name_2)
                         break
 
-                # If we arrive here, all combinations have been unsuccessfully tried - take first possibility by default
+                # All combinations unsuccessfully tried - take first possibility by default
                 if j == 7:
                     self.current_round.add_match(first_name_1, free_first_name_2, last_name_1, free_last_name_2)
 

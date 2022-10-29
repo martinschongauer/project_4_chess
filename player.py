@@ -167,6 +167,7 @@ class Player:
         self.birth_day = day
         self.birth_mon = mon
         self.birth_year = year
+
         return True
 
     def set_sex(self, sex: str) -> bool:

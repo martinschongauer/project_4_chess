@@ -125,7 +125,7 @@ class Round:
          """
 
         datetime_start = datetime.datetime.now()
-        self.date_start = datetime_start.strftime(f"%H:%M:%S on %A, %B the %dth, %Y")
+        self.date_start = datetime_start.strftime("%H:%M:%S on %A, %B the %dth, %Y")
         self.round_started = True
 
         return
@@ -137,7 +137,7 @@ class Round:
         """
 
         datetime_stop = datetime.datetime.now()
-        self.date_stop = datetime_stop.strftime(f"%H:%M:%S on %A, %B the %dth, %Y")
+        self.date_stop = datetime_stop.strftime("%H:%M:%S on %A, %B the %dth, %Y")
         self.round_finished = True
 
         return
