@@ -25,6 +25,13 @@ Lancer le programme:
 $ python3 main.py
 ```
 
+Le rapport est généré par flake8:
+```
+$ flake8 --format=html --htmldir=flake-report
+```
+
+(flake8 est configuré à l'aide du fichier setup.cfg)
+
 ### Usage général
 Le main entre directement dans la boucle principale du "controller" du modèle MVC. Cette dernière prend les commandes de l'utilisateur, 
 que l'on peut obtenir en tapant "help", et qui sont affichées au lancement du programme. Le fichier ChessDB contient toute la base de
